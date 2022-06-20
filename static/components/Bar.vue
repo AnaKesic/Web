@@ -12,11 +12,11 @@
         <v-icon>mdi-magnify</v-icon>
        </v-btn>
         <v-btn  @click="kk()" >
-           Log in
+           Prijavi se
         </v-btn>
 
          <v-btn @click="goToHome()">
-           Sign in
+           Napravi nalog
         </v-btn>
         
       </v-toolbar>
