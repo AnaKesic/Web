@@ -15,7 +15,8 @@ public class TestService {
 	}
 	
 	public ArrayList<Test> getAll() {
-		return testRepository.getAll();
+		 ArrayList<Test> testovi = testRepository.getAll();
+		 return testovi;
 	}
 	
 	public Test addTest(TestDTO testDTO) {

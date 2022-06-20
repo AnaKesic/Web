@@ -44,12 +44,22 @@
         Vue.use(httpVueLoader);
 
         Vue.component("test", httpVueLoader("components/Test.vue"))
+        Vue.component("bar", httpVueLoader("components/Bar.vue"))
+        Vue.component("card", httpVueLoader("components/Card.vue"))
+        Vue.component("login", httpVueLoader("components/Login.vue"))
 
         const routes = [
             {
                 path: "/",
                 name: "Home",
                 component: httpVueLoader("views/Home.vue")
+            },
+            {
+                path:"/login",
+                name:"Login",
+                component:httpVueLoader("components/Login.vue")
+
+
             }
         ];
 

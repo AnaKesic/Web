@@ -6,8 +6,9 @@ import java.time.LocalDateTime;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import web2022.controller.SportskiObjekatController;
 import web2022.controller.TestController;
-
+import web2022.service.SportskiObjekatService;
 import web2022.service.TestService;
 
 import web2022.utils.LocalDateTimeDeserializer;
@@ -35,6 +36,8 @@ public class Application {
 	public static File uploadDir;
 	
 	public static TestService testService;
+	
+	public static SportskiObjekatService sportskiObjekatService;
 	
 	public static Route serveStaticResource = (Request request, Response response) ->
 	{
@@ -80,6 +83,7 @@ public class Application {
 		gson = createCustomGson();
 		
 		testService = new TestService();
+		sportskiObjekatService = new SportskiObjekatService();
 		
 		uploadDir = new File(System.getProperty("user.dir") + "/upload");
 		uploadDir.mkdir();
@@ -96,10 +100,13 @@ public class Application {
 		get("/", serveStaticResource);
 		
 		post("rest/test/add-test", TestController.addTest);
+		post("rest/sportski-objekat/add-sportski-objekat", SportskiObjekatController.addSportskiObjekat);
 		
 		put("rest/test/update-test", TestController.updateTest);
 		
 		get("rest/test/get-all", TestController.getAll);
+		get("rest/sportski-objekat/get-all", SportskiObjekatController.getAll);
+		get("rest/sportski-objekat/search/:naziv/:tip/:lokacija/:prosecna-ocena", SportskiObjekatController.search);
 		
 		delete("rest/test/delete-test/:id", TestController.deleteTest);
 		

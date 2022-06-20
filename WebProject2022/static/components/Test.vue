@@ -1,13 +1,11 @@
 <template>
   <div class="text-center">
-    <p>This is component.</p>
+    <br></br>
     <v-dialog v-model="dialog" width="500">
       <template v-slot:activator="{ on, attrs }">
-        <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on">Click Me</v-btn>
-        <v-btn color="red lighten-2" dark v-on:click="buttonClickDelete">Delete test</v-btn>
-        <v-btn color="red lighten-2" dark v-on:click="buttonClickUpdate">Update test</v-btn>
-        <v-btn color="red lighten-2" dark v-on:click="buttonClickCreate">Create test</v-btn>
-        <v-btn color="red lighten-2" dark v-on:click="buttonClickGetAll">Get all tests</v-btn>
+       
+        <v-btn color="red lighten-2" dark v-on:click="buttonClickCreate">Dodaj sportski objekat</v-btn>
+        <v-btn color="red lighten-2" dark v-on:click="buttonClickGetAll">Sportski objekti</v-btn>
       </template>
       <v-card>
         <v-card-title class="text-h5 grey lighten-2">Privacy Policy</v-card-title>
@@ -36,63 +34,47 @@ module.exports = {
     data() {
         return {
             dialog: false,
-            test: null
+            test: null,
+            sportskiObjekti: [],
+           
         }
     },
     methods: {
         buttonClickGetAll() {
-          axios.get("http://localhost:8080/rest/test/get-all")
+          axios.get("http://localhost:8080/rest/sportski-objekat/get-all")
             .then(r => {
               this.test = r.data[0]
+              this.sportskiObjekti= r.data
+              console.log(this.sportskiObjekti)
             })
         },
         buttonClickCreate() {
-          var test = {
-            isDeleted: true,
-            name: 'Test 1',
-            user: {
-              name: 'Nikola',
-              surname: 'Antonic'
+          var sportskiObjekat = {
+             "id": 1655632,
+             "naziv": "Naziv",
+              "tip": "Teretana",
+              "sadrzaj": "Sauna",
+              "status": "Radi",
+              "logoObjekta": "img/profile.jpg",
+              "lokacija": {
+                  "geografskaDuzina": 16.4,
+                  "geografskaSirina": 55.0,
+                  "adresa": "hadhsa"
+              },
+              "prosecnaOcena": 5.0,
+              "pocetakRadnogVremena": "Rdf",
+              "krajRadnogVremena": "Raddsfsfi"
             }
-          }
-          axios.post("http://localhost:8080/rest/test/add-test", test)
+          axios.post("http://localhost:8080/rest/sportski-objekat/add-sportski-objekat", sportskiObjekat)
             .then(r => {
               console.log(r.data)
             })
         },
-        buttonClickUpdate() {
-          if(this.test == null) {
-            alert("Select some test/click get all")
-            return
-          }
-          var test = {
-            id: this.test.id,
-            isDeleted: false,
-            name: 'Izmenjeni test',
-            user: {
-              id: this.test.user.id,
-              name: 'Bojana',
-              surname: 'Pjevalica'
-            }
-          }
-          axios.put("http://localhost:8080/rest/test/update-test", test)
-            .then(r => {
-              console.log(r.data)
-            })
-        },
-        buttonClickDelete() {
-          if(this.test == null) {
-            alert("Select some test/click get all")
-            return
-          }
-          axios.delete("http://localhost:8080/rest/test/delete-test/" + this.test.id)
-            .then(r => {
-              console.log(r.data)
-            })
-        }
+        
+        
     },
     mounted() {
-      console.log("Test is mounted.")
+      console.log("Sportski is mounted.")
     }
 }
 
