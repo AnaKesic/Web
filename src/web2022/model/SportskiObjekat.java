@@ -2,6 +2,7 @@ package web2022.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,7 +29,7 @@ public class SportskiObjekat implements Serializable, Comparable<SportskiObjekat
 	 private Long id;
 	 private String naziv;
 	 private Tip tip;
-	 private Sadrzaj sadrzaj;
+	 private ArrayList<Sadrzaj>sadrzaj;
 	 private Status status;
 	 private Lokacija lokacija;
 	 private String logoObjekta;

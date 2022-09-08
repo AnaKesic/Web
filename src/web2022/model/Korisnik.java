@@ -37,8 +37,8 @@ public class Korisnik implements Serializable {
 	private Uloga uloga;
 	private ArrayList<Trening> istorijaTreninga;	
 	private Clanarina clanarina;  // za korisnika
-	private SportskiObjekat sportskiObjekat; // za menadzera
-	private ArrayList<SportskiObjekat> poseceniObjekti; // sve porudzbine dostavljaca koje treba da dostavi
+	private String nazivSpObj; // za menadzera
+	private ArrayList<String> poseceniObjekti; //
 	private double brojSakupljenihBodova;
 	private TipKupca tipKupca;
 	private double popust; // u procentima
@@ -62,7 +62,7 @@ public class Korisnik implements Serializable {
 		this.uloga=Uloga.KUPAC;
 		this.istorijaTreninga= new ArrayList<Trening>() ;
 		this.clanarina=new Clanarina();
-		this.sportskiObjekat=new SportskiObjekat();
+		this.nazivSpObj="";
 		this.poseceniObjekti=new ArrayList<>();
 		this.brojSakupljenihBodova=0;
 		this.tipKupca=TipKupca.BRONZANI;

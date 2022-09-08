@@ -4,6 +4,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
 
+
 import io.jsonwebtoken.lang.Arrays;
 import web2022.model.Korisnik.Pol;
 import web2022.model.Korisnik.TipKupca;
@@ -49,6 +50,15 @@ public class SportskiObjekatService {
 		} else if(sportskiObjekatDTO.getTip().equals("Plesni studio")) {
 			 sportskiObjekat.setTip(Tip.PLESNI_STUDIO);
 		}
+		if(sportskiObjekatDTO.getSadrzaj().equals("GRUPNI TRENING")) {
+			sportskiObjekat.getSadrzaj().add(Sadrzaj.GRUPNI_TRENING);
+		}else if(sportskiObjekatDTO.getSadrzaj().equals("PERSONALNI TRENING")) {
+			sportskiObjekat.getSadrzaj().add(Sadrzaj.PERSONALNI_TRENING);
+		} else if(sportskiObjekatDTO.getSadrzaj().equals("SAUNA")) {
+			sportskiObjekat.getSadrzaj().add(Sadrzaj.SAUNA);
+		}
+		
+		
 		
 		if(sportskiObjekatDTO.getStatus().equals("OTVORENO")) {
 			sportskiObjekat.setStatus(Status.OTVORENO);
@@ -56,13 +66,7 @@ public class SportskiObjekatService {
 			sportskiObjekat.setStatus(Status.ZATVORENO);
 		}
 		
-		if(sportskiObjekatDTO.getSadrzaj().equals("Grupni trening")) {
-			sportskiObjekat.setSadrzaj(Sadrzaj.GRUPNI_TRENING);
-		} else if(sportskiObjekatDTO.getSadrzaj().equals("Personalni trening")) {
-			sportskiObjekat.setSadrzaj(Sadrzaj.PERSONALNI_TRENING);
-		} else if(sportskiObjekatDTO.getSadrzaj().equals("Sauna")) {
-			sportskiObjekat.setSadrzaj(Sadrzaj.SAUNA);
-		}
+		
 	
 		
 		sportskiObjekat.setLokacija(sportskiObjekatDTO.getLokacija());
@@ -131,5 +135,16 @@ public class SportskiObjekatService {
 		
 		return;
 		
+	}
+	public SportskiObjekat getByName(String naziv) {
+		ArrayList<SportskiObjekat> sportskiObjekti =getAll();
+		SportskiObjekat ret = null;
+		for(SportskiObjekat s : sportskiObjekti ) {
+			if(s.getNaziv().equals(naziv)) {
+				ret=s;
+				break;
+			}
+		}
+		return ret;
 	}
 }

@@ -2,9 +2,11 @@ package web2022.service;
 
 import java.util.ArrayList;
 
+
 import web2022.dto.KorisnikDTO;
 import web2022.dto.TestDTO;
 import web2022.model.Korisnik;
+import web2022.model.SportskiObjekat;
 import web2022.model.Test;
 import web2022.repository.KorisniciRepository;
 import web2022.repository.TestRepository;
@@ -51,5 +53,19 @@ public class KorisnikService {
 	    Korisnik k = korisnikRepository.update(kDTO);
 		
 		return k;
+	}
+	public ArrayList<Korisnik> getKupcii(String naziv) {
+		ArrayList<Korisnik> kupci = new ArrayList<Korisnik>();
+		for (Korisnik k : getAll()) {
+			for (String pos : k.getPoseceniObjekti()) {
+				 
+				if (pos.toLowerCase().equals(naziv.toLowerCase())) {
+					kupci.add(k);
+					
+		        }
+				
+			}
+		}
+		return kupci;
 	}
 }

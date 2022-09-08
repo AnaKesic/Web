@@ -65,7 +65,7 @@ private String filename;
 		ArrayList<SportskiObjekat> sportskiObjekti = getAll();
 		boolean exist = false;
 		for(SportskiObjekat sportskiObjekat : sportskiObjekti) {
-			if(sportskiObjekat.getId().equals(newSportskiObjekat.getId())) {
+			if(sportskiObjekat.getId()==(newSportskiObjekat.getId())) {
 				exist = true;
 				break;
 			}

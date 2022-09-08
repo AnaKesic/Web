@@ -49,6 +49,13 @@ public class SportskiObjekatController {
 		String returnToFront = gson.toJson(sportskiObjekti);
 		return returnToFront;
 	};
+	public static Route ucitajObjMen = (Request request, Response response) -> {
+		String naziv = request.params(":naziv");
+		SportskiObjekat sportskiObjekat = sportskiObjekatService.getByName(naziv);
+		
+		String returnToFront = gson.toJson(sportskiObjekat);
+		return returnToFront;
+	};
 
 	
 	

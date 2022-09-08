@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import web2022.model.Lokacija;
-import web2022.model.SportskiObjekat.Sadrzaj;
+
 import web2022.model.SportskiObjekat.Status;
 import web2022.model.SportskiObjekat.Tip;
 @AllArgsConstructor

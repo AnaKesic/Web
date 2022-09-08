@@ -101,6 +101,9 @@ public class Application {
        	post("rest/sportski-objekat/add-sportski-objekat", SportskiObjekatController.addSportskiObjekat);
         get("rest/sportski-objekat/get-all", SportskiObjekatController.getAll);
 		get("rest/sportski-objekat/search", SportskiObjekatController.search);
+		get("rest/ucitajobjmen/:naziv", SportskiObjekatController.ucitajObjMen);
+		get("rest/korisnik/getKupci/:naziv", KorisnikController.getKupciZaSportskiObjekat);
+
 
 		get("/", serveStaticResource);
 		put("rest/teretana/login",KorisnikController.getbyID);
