@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import web2022.dto.KorisnikDTO;
 import web2022.dto.TestDTO;
 import web2022.model.Korisnik;
+import web2022.model.Korisnik.Uloga;
 import web2022.model.Test;
 import web2022.repository.KorisniciRepository;
 import web2022.repository.TestRepository;
@@ -51,5 +52,18 @@ public class KorisnikService {
 	    Korisnik k = korisnikRepository.update(kDTO);
 		
 		return k;
+	}
+	public ArrayList<String> findFreeMenagers(){
+		ArrayList<String> slobodni= new ArrayList<String>();
+		ArrayList<Korisnik> svi= getAll();
+		for (Korisnik k :svi) {
+			if(k.getUloga().equals(Uloga.MENADZER)) {
+				if(k.getSportskiObjekat().equals("")) {
+					slobodni.add(k.getKorisnickoIme());
+					
+				}
+			}
+		}
+		return slobodni;
 	}
 }

@@ -44,7 +44,7 @@
 </template>
 
 <template v-if="objekat">
-   <Addso></Addso>
+   <Addso v-on:close-addso="objekat = false, pocetna = true"></Addso>
 </template>
 
  

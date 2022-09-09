@@ -23,19 +23,19 @@ import web2022.model.Test;
 public class SportskiObjekatRepository {
 private String filename;
 	
-	public SportskiObjekatRepository() {
+	public  SportskiObjekatRepository() {
 		this.filename = "sportskiObjekti.json";
 		this.initFile();
 	}
 	
-	private void initFile()
+	private void  initFile()
 	{
 		File file = new File(this.filename);
 		if (!file.isFile()) {
 			this.saveAll(new ArrayList<SportskiObjekat>());
 		}
 	}
-	private void saveAll(Collection<SportskiObjekat> sportskiObjekti)
+	private  void saveAll(Collection<SportskiObjekat> sportskiObjekti)
 	{
 		try (FileWriter writer = new FileWriter(this.filename)) {
 			gson.toJson(sportskiObjekti, writer);
@@ -45,7 +45,7 @@ private String filename;
 		}
 	}
 	
-	public ArrayList<SportskiObjekat> getAll() {
+	public  ArrayList<SportskiObjekat> getAll() {
 		ArrayList<SportskiObjekat> sportskiObjekti = null;
 		Type collectionType = new TypeToken<Collection<SportskiObjekat>>(){}.getType();
 		try(FileReader freader = new FileReader(this.filename); JsonReader jreader = new JsonReader(freader)) {
@@ -61,9 +61,10 @@ private String filename;
 		return sportskiObjekti;
 	}
 	
-	public SportskiObjekat add(SportskiObjekat newSportskiObjekat) {
-		ArrayList<SportskiObjekat> sportskiObjekti = getAll();
+	public  SportskiObjekat add(SportskiObjekat newSportskiObjekat) {
+		ArrayList<SportskiObjekat> sportskiObjekti =getAll();
 		boolean exist = false;
+		System.out.println("usao");
 		for(SportskiObjekat sportskiObjekat : sportskiObjekti) {
 			if(sportskiObjekat.getId().equals(newSportskiObjekat.getId())) {
 				exist = true;

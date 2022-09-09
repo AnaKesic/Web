@@ -6,13 +6,15 @@ import java.time.LocalDateTime;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import web2022.controller.FileController;
 import web2022.controller.KorisnikController;
 import web2022.controller.SportskiObjekatController;
 import web2022.controller.TestController;
+import web2022.service.FileService;
 import web2022.service.KorisnikService;
 import web2022.service.SportskiObjekatService;
 import web2022.service.TestService;
-
+import web2022.service.TreningService;
 import web2022.utils.LocalDateTimeDeserializer;
 import web2022.utils.LocalDateTimeSerializer;
 
@@ -39,7 +41,8 @@ public class Application {
 	public static SportskiObjekatService sportskiObjekatService;
 	public static TestService testService;
 	public static KorisnikService korisnikService;
-	
+	public static FileService fileService;
+	public static TreningService treningService;
 	public static Route serveStaticResource = (Request request, Response response) ->
 	{
 		response.redirect("/static/index.html");
@@ -84,9 +87,12 @@ public class Application {
 		gson = createCustomGson();
 		
 		testService = new TestService();
+		fileService = new FileService();
 	    sportskiObjekatService = new SportskiObjekatService();
 		korisnikService= new KorisnikService();
-		uploadDir = new File(System.getProperty("user.dir") + "/upload");
+		
+		
+		uploadDir = new File(System.getProperty("user.dir") + "/static/files/upload");
 		uploadDir.mkdir();
 
 		port(8080);
@@ -114,9 +120,10 @@ public class Application {
 		get("rest/test/get-all", TestController.getAll);
 		
 		delete("rest/test/delete-test/:id", TestController.deleteTest);
-		
+		post("rest/file/upload", FileController.upload);
 		get("rest/korisnk/getById/:id",KorisnikController.getbyIDD);
 		post("rest/korisnik/settings", KorisnikController.settings);
+		get("/rest/menager/getForObject",KorisnikController.getFreeMenagers);
 		
 		get("*", (request, response) ->
 		{

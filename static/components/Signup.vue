@@ -104,7 +104,9 @@ methods: {
               "prezime": this.lastName,
               "rodjendan": this.date,
               "pol": this.gender,
-              "sifra": this.password
+              "sifra": this.password,
+              "uloga":"KUPAC",
+              "sportskiObjekat":""
             };
           axios.post("http://localhost:8080/rest/korisnik/signup", Korisnik)
             .then(r => {

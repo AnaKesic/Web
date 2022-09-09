@@ -25,5 +25,7 @@ public class KorisnikDTO {
     private String prezime;
     private String rodjendan;
     private String pol;
+    private Uloga uloga;
+    private String sportskiObjekat;
 
 }

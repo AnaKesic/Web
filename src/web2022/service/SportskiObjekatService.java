@@ -34,44 +34,13 @@ public class SportskiObjekatService {
 	     Collections.sort(sportskiObjekti);
 		 return sportskiObjekti;
 	}
-	public SportskiObjekat addSportskiObjekat(SportskiObjekatDTO sportskiObjekatDTO) {
-//		Test test = new Test(testDTO);
-		SportskiObjekat sportskiObjekat = new SportskiObjekat();
-		sportskiObjekat.setId(System.currentTimeMillis());
-		sportskiObjekat.setNaziv(sportskiObjekatDTO.getNaziv());
-		
-		if(sportskiObjekatDTO.getTip().equals("Teretana")) {
-			sportskiObjekat.setTip(Tip.TERETANA);
-		} else if(sportskiObjekatDTO.getTip().equals("Bazen")) {
-			sportskiObjekat.setTip(Tip.BAZEN);
-		} else if(sportskiObjekatDTO.getTip().equals("Sportski centar")) {
-			sportskiObjekat.setTip(Tip.SPORTSKI_CENTAR);
-		} else if(sportskiObjekatDTO.getTip().equals("Plesni studio")) {
-			 sportskiObjekat.setTip(Tip.PLESNI_STUDIO);
-		}
-		
-		if(sportskiObjekatDTO.getStatus().equals("OTVORENO")) {
-			sportskiObjekat.setStatus(Status.OTVORENO);
-		} else if(sportskiObjekatDTO.getStatus().equals("ZATVORENO")) {
-			sportskiObjekat.setStatus(Status.ZATVORENO);
-		}
-		
-		if(sportskiObjekatDTO.getSadrzaj().equals("Grupni trening")) {
-			sportskiObjekat.setSadrzaj(Sadrzaj.GRUPNI_TRENING);
-		} else if(sportskiObjekatDTO.getSadrzaj().equals("Personalni trening")) {
-			sportskiObjekat.setSadrzaj(Sadrzaj.PERSONALNI_TRENING);
-		} else if(sportskiObjekatDTO.getSadrzaj().equals("Sauna")) {
-			sportskiObjekat.setSadrzaj(Sadrzaj.SAUNA);
-		}
-	
-		
-		sportskiObjekat.setLokacija(sportskiObjekatDTO.getLokacija());
-		sportskiObjekat.setLogoObjekta(sportskiObjekatDTO.getLogoObjekta());
-		sportskiObjekat.setProsecnaOcena(sportskiObjekatDTO.getProsecnaOcena());
-		sportskiObjekat.setPocetakRadnogVremena(sportskiObjekatDTO.getPocetakRadnogVremena());
-		sportskiObjekat.setKrajRadnogVremena(sportskiObjekatDTO.getKrajRadnogVremena());
+	public  SportskiObjekat addSportskiObjekat(SportskiObjekatDTO sportskiObjekatDTO) {
 
-		sportskiObjekatRepository.add(sportskiObjekat);
+		SportskiObjekat sportskiObjekat = new SportskiObjekat(sportskiObjekatDTO);
+		sportskiObjekat=this.sportskiObjekatRepository.add(sportskiObjekat);
+	       
+		
+		
 		return sportskiObjekat;
 	}
 

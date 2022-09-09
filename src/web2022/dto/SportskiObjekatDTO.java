@@ -1,5 +1,7 @@
 package web2022.dto;
 
+import java.util.ArrayList;
+
 import com.google.gson.annotations.Expose;
 
 import lombok.AllArgsConstructor;
@@ -17,15 +19,13 @@ import web2022.model.SportskiObjekat.Tip;
 @Getter
 public class SportskiObjekatDTO {
 	
-	private Long id;
+
 	private String naziv;
 	private String tip;
-	private String sadrzaj;
-	private String status;
-	private Lokacija lokacija;
-	private String logoObjekta;
-	private double prosecnaOcena;
-	private String pocetakRadnogVremena;
-	private String krajRadnogVremena;
+	private String lokacija;
+	private String logo;
+	private String pocetnoVreme;
+	private String krajnjeVreme;
+	private ArrayList<String> sadrzaj;
 
 }

@@ -60,10 +60,15 @@ public class Korisnik implements Serializable {
 		}
 		
 		this.datumRodjenja=kDTO.getRodjendan();
-		this.uloga=Uloga.KUPAC;
+		if(kDTO.getUloga().equals(Uloga.KUPAC)) {
+		this.uloga=Uloga.KUPAC;}
+		if(kDTO.getUloga().equals(Uloga.MENADZER)) {
+			this.uloga=Uloga.MENADZER;}
+		if(kDTO.getUloga().equals(Uloga.TRENER)) {
+			this.uloga=Uloga.TRENER;}
 		this.istorijaTreninga= new ArrayList<Trening>() ;
 		this.clanarina=new Clanarina();
-		this.sportskiObjekat="";
+		this.sportskiObjekat=kDTO.getSportskiObjekat();
 		this.poseceniObjekti=new ArrayList<>();
 		this.brojSakupljenihBodova=0;
 		this.tipKupca=TipKupca.BRONZANI;

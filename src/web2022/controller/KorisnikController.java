@@ -63,4 +63,12 @@ public class KorisnikController {
 		return returnToFront;
 		 
 	 };
+	 public static Route  getFreeMenagers =(Request request, Response response) -> {
+		 
+		 ArrayList<String> menagers= korisnikService.findFreeMenagers();
+		 String returnToFront = gson.toJson(menagers);
+		 return returnToFront;
+			 
+		 
+	 };
 }
