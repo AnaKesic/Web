@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import web2022.dto.KorisnikDTO;
 import web2022.dto.TestDTO;
 import web2022.model.Korisnik;
+import web2022.model.Korisnik.Uloga;
 import web2022.model.SportskiObjekat;
 import web2022.model.Test;
 import web2022.repository.KorisniciRepository;
@@ -67,5 +68,14 @@ public class KorisnikService {
 			}
 		}
 		return kupci;
+	}
+	public ArrayList<Korisnik> getTreneri() {
+		ArrayList<Korisnik> treneri = new ArrayList<Korisnik>();
+		for(Korisnik k : getAll()) {
+			if(k.getUloga()==(Uloga.TRENER)) {
+				treneri.add(k);
+			}
+		}
+		return treneri;
 	}
 }

@@ -19,7 +19,7 @@
 
    </div>		
     <div style="margin: left; padding-all: 20px;" class="left">
-     <h>Sortiraj:</h>
+     <header>Sortiraj:</header>
                 <select style="background:lightgray" name="tipSortiranja" v-on:change="sort" v-model="tipSortiranja">
                       <option value="tip">Tip</option>
                     <option value="naziv">Naziv</option>

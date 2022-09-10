@@ -3,15 +3,19 @@ package web2022.controller;
 import static web2022.Application.gson;
 import static web2022.Application.korisnikService;
 import static web2022.Application.sportskiObjekatService;
+import static web2022.Application.treningService;
 import static web2022.utils.Responses.serverError;
 
 import java.util.ArrayList;
+
+
 
 import spark.Request;
 import spark.Response;
 import spark.Route;
 import web2022.dto.KorisnikDTO;
 import web2022.dto.KorisnikIspisDTO;
+import web2022.dto.KorisnikMenDTO;
 import web2022.model.Korisnik;
 import web2022.model.SportskiObjekat;
 import web2022.model.Test;
@@ -85,4 +89,21 @@ public class KorisnikController {
 		
 		 
 	 };
+	 public static Route  getTreneri =(Request request, Response response) -> {
+		 
+		 ArrayList<Korisnik> treneri = korisnikService.getTreneri();
+		 ArrayList<KorisnikMenDTO> trenerifront= new ArrayList<KorisnikMenDTO>();
+		
+			
+			for(Korisnik t : treneri) {
+				trenerifront.add(new KorisnikMenDTO(t));
+			}
+			
+			String returnToFront = gson.toJson(trenerifront);
+			return returnToFront;
+			
+		
+		 
+	 };
+
 }

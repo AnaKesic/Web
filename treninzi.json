@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1660155850000,
+        "naziv": "Lep trening",
+        "tipTreninga": "Grupni",
+        "objekatGdePripada": "Naziv",
+        "trajanje": 5.0,
+        "trener": {
+            "id": 1.66094452E12,
+            "korisnickoIme": "TrenerPera",
+            "lozinka": "taki123",
+            "ime": "Petar",
+            "prezime": "Petrovic",
+            "pol": "ZENSKI",
+            "datumRodjenja": "2022-08-02",
+            "uloga": "TRENER",
+            "istorijaTreninga": [],
+            "clanarina": {},
+            "nazivSpObj": "Naziv",
+            "poseceniObjekti": [],
+            "brojSakupljenihBodova": 0.0,
+            "tipKupca": "BRONZANI",
+            "popust": 0.0,
+            "trazeniBrojBodova": 0.0,
+            "blokiran": false,
+            "obrisan": false
+        },
+        "opis": "Trening za opustanje uz veliki broj ljudi!",
+        "slika": "KUPAC"
+    },
+    {
+        "id": 1660155850000,
+        "naziv": "Telo iz snova",
+        "tipTreninga": "Personalni",
+        "objekatGdePripada": "Naziv",
+        "trajanje": 1.0,
+        "trener": {
+            "id": 1.66094452E12,
+            "korisnickoIme": "TrenerPera",
+            "lozinka": "taki123",
+            "ime": "Petar",
+            "prezime": "Petrovic",
+            "pol": "ZENSKI",
+            "datumRodjenja": "2022-08-02",
+            "uloga": "TRENER",
+            "istorijaTreninga": [],
+            "clanarina": {},
+            "nazivSpObj": "Naziv",
+            "poseceniObjekti": [],
+            "brojSakupljenihBodova": 0.0,
+            "tipKupca": "BRONZANI",
+            "popust": 0.0,
+            "trazeniBrojBodova": 0.0,
+            "blokiran": false,
+            "obrisan": false
+        },
+        "opis": "Trening za telo iz snova!",
+        "slika": "KUPAC"
+    }
+]

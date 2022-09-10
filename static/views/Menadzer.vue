@@ -60,14 +60,23 @@
    </v-row>
 </template>
 <template v-if="tren">
-  <v-btn color="red"  @click="nazadd">Nazad</v-btn>
-</template>
+  <Treneri :id=idd></Treneri>
+  <v-row justify="center">
+   <v-btn color="red"  @click="nazadd">Nazad</v-btn>
+   </v-row>
+   </template>
 <template v-if="pos">
   <Posetioci :id=idd></Posetioci>
-  <v-btn color="red"  @click="nazadd">Nazad</v-btn>
+  <v-row></v-row>
+  <v-row justify="center">
+   <v-btn color="red"  @click="nazadd">Nazad</v-btn>
+   </v-row>
 </template>
 <template v-if="tr">
-  <v-btn color="red" @click="nazadd">Nazad</v-btn>
+  <Menadzertreninzi :id=idd></Menadzertreninzi>
+  <v-row justify="center">
+   <v-btn color="red"  @click="nazadd">Nazad</v-btn>
+   </v-row>
 </template>
 
 

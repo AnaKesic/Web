@@ -9,10 +9,11 @@ import com.google.gson.GsonBuilder;
 import web2022.controller.KorisnikController;
 import web2022.controller.SportskiObjekatController;
 import web2022.controller.TestController;
+import web2022.controller.TreningController;
 import web2022.service.KorisnikService;
 import web2022.service.SportskiObjekatService;
 import web2022.service.TestService;
-
+import web2022.service.TreningService;
 import web2022.utils.LocalDateTimeDeserializer;
 import web2022.utils.LocalDateTimeSerializer;
 
@@ -39,6 +40,7 @@ public class Application {
 	public static SportskiObjekatService sportskiObjekatService;
 	public static TestService testService;
 	public static KorisnikService korisnikService;
+	public static TreningService treningService;
 	
 	public static Route serveStaticResource = (Request request, Response response) ->
 	{
@@ -86,6 +88,7 @@ public class Application {
 		testService = new TestService();
 	    sportskiObjekatService = new SportskiObjekatService();
 		korisnikService= new KorisnikService();
+		treningService = new TreningService();
 		uploadDir = new File(System.getProperty("user.dir") + "/upload");
 		uploadDir.mkdir();
 
@@ -103,8 +106,12 @@ public class Application {
 		get("rest/sportski-objekat/search", SportskiObjekatController.search);
 		get("rest/ucitajobjmen/:naziv", SportskiObjekatController.ucitajObjMen);
 		get("rest/korisnik/getKupci/:naziv", KorisnikController.getKupciZaSportskiObjekat);
-
-
+		get("rest/trening/getTreneri/:naziv", TreningController.getTreneriZaSportskiObjekat);
+		get("rest/trening/getTreninzi/:naziv", TreningController.getTreninziZaSportskiObjekat);
+		get("rest/trening/getTrenerTreninzi/:kIme", TreningController.getTreninziZaTrenera);
+		post("rest/trening/addTrening",TreningController.addTrening);
+		get("rest/korisnik/getTreneri", KorisnikController.getTreneri);
+		
 		get("/", serveStaticResource);
 		put("rest/teretana/login",KorisnikController.getbyID);
 		
