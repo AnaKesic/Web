@@ -9,8 +9,11 @@
   
 
     <v-spacer></v-spacer>
+    <v-btn @click="Pocetnastr">
+      Početna
+    </v-btn>
 
-  <v-btn  >
+  <v-btn @click="Ktrener" >
        Kreiraj trenere
     </v-btn>
     <v-btn  >
@@ -46,6 +49,10 @@
 <template v-if="objekat">
    <Addso v-on:close-addso="objekat = false, pocetna = true"></Addso>
 </template>
+<template v-if="trener">
+   <Addtr v-on:close-addtr="trener = false, kupac = true"></Addtr>
+</template>
+
 
  
     </div>
@@ -100,7 +107,32 @@ module.exports={
          
          this.kupci=false,
          this.komentari=false
+      },
+      Pocetnastr(){
+         this.profil=false,
+         this.pocetna=true,
+         this.trener=false,
+         this.menadzer=false,
+
+         this.objekat=false,
+         
+         this.kupci=false,
+         this.komentari=false
+
+      },
+      Ktrener(){
+         this.profil=false,
+         this.pocetna=false,
+         this.trener=true,
+         this.menadzer=false,
+
+         this.objekat=false,
+         
+         this.kupci=false,
+         this.komentari=false
+
       }
+      
    }
    }
 
