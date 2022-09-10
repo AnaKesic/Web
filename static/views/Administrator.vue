@@ -16,7 +16,7 @@
   <v-btn @click="Ktrener" >
        Kreiraj trenere
     </v-btn>
-    <v-btn  >
+    <v-btn @click="menadzerr" >
        Kreiraj menadzera
     </v-btn>
     <v-btn @click="SOMode" >
@@ -51,6 +51,9 @@
 </template>
 <template v-if="trener">
    <Addtr v-on:close-addtr="trener = false, kupac = true"></Addtr>
+</template>
+<template v-if="menadzer">
+   <Addmen v-on:close-addmen="menadzer = false, kupac = true"></Addmen>
 </template>
 
 
@@ -125,6 +128,18 @@ module.exports={
          this.pocetna=false,
          this.trener=true,
          this.menadzer=false,
+
+         this.objekat=false,
+         
+         this.kupci=false,
+         this.komentari=false
+
+      },
+      menadzerr(){
+         this.profil=false,
+         this.pocetna=false,
+         this.trener=false,
+         this.menadzer=true,
 
          this.objekat=false,
          
