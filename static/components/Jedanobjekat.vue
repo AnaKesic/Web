@@ -93,7 +93,7 @@
              .then(r=>{
                  console.log(r.data)
                  this.User=r.data
-                 this.nazivSpObj=this.User.nazivSpObj
+                 this.nazivSpObj=this.User.sportskiObjekat
                  this.ucitaj()
              
              }

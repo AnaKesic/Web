@@ -2,6 +2,7 @@ package web2022.controller;
 
 import static web2022.Application.gson;
 import static web2022.Application.korisnikService;
+import static web2022.Application.sportskiObjekatService;
 import static web2022.utils.Responses.serverError;
 
 import java.util.ArrayList;
@@ -14,8 +15,11 @@ import web2022.dto.KorisnikDTO;
 import web2022.dto.KorisnikIspisDTO;
 import web2022.dto.KorisnikMenDTO;
 import web2022.model.Korisnik;
+import web2022.model.SportskiObjekat;
 import web2022.model.Test;
+import web2022.model.SportskiObjekat.Sadrzaj;
 import web2022.service.KorisnikService;
+import web2022.service.SportskiObjekatService;
 
 public class KorisnikController {
 
@@ -121,18 +125,31 @@ public class KorisnikController {
 		 public static Route  getTreneri =(Request request, Response response) -> {
 			 
 			 ArrayList<Korisnik> treneri = korisnikService.getTreneri();
-			 ArrayList<KorisnikMenDTO> trenerifront= new ArrayList<KorisnikMenDTO>();
-			
+			 System.out.println(treneri);
+			 ArrayList<String> izlaz=new ArrayList<String>();
+			for(Korisnik k:treneri)
+			{
+				izlaz.add(k.getKorisnickoIme());
 				
-				for(Korisnik t : treneri) {
-					trenerifront.add(new KorisnikMenDTO(t));
-				}
+			}
 				
-				String returnToFront = gson.toJson(trenerifront);
+				
+				String returnToFront = gson.toJson(izlaz);
 				return returnToFront;
 				
 			
 			 
 		 };
-		 
+		 public static Route getSadrzajj = (Request request, Response response) -> {
+			 System.out.println("usao u controler");
+	 	     String naziv = request.body();
+			 Korisnik kor = korisnikService.getByIdd(naziv);
+			 System.out.println(kor);
+			 SportskiObjekat sp=sportskiObjekatService.getByName(kor.getSportskiObjekat());
+			 ArrayList<Sadrzaj> sadr=sp.getSadrzaj();
+			 System.out.println(sp);
+		
+			String returnToFront = gson.toJson(sadr);
+			return returnToFront;
+		};
 }

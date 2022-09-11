@@ -15,6 +15,7 @@ import web2022.dto.SportskiObjekatDTO;
 import web2022.dto.SportskiObjekatSearchDTO;
 import web2022.dto.TestDTO;
 import web2022.model.SportskiObjekat;
+import web2022.model.SportskiObjekat.Sadrzaj;
 import web2022.model.Test;
 
 import web2022.model.Trening;
@@ -64,6 +65,7 @@ public class SportskiObjekatController {
 		return returnToFront;
 	};
 
+	
 	
 	
 	

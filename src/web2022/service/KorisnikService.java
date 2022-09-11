@@ -37,6 +37,7 @@ public class KorisnikService {
 			
 			
 		    Korisnik k = korisnikRepository.getByIdd(id);
+		    System.out.println(k);
 			
 			return k;
 		}
@@ -93,12 +94,16 @@ public class KorisnikService {
 		return kupci;
 	}
 	public ArrayList<Korisnik> getTreneri() {
-		ArrayList<Korisnik> treneri = new ArrayList<Korisnik>();
-		for(Korisnik k : getAll()) {
-			if(k.getUloga()==(Uloga.TRENER)) {
-				treneri.add(k);
-			}
-		}
+		
+		ArrayList<Korisnik> treneri = korisnikRepository.getTreneri();
+//		ArrayList<Korisnik> svi=getAll();
+//		
+//		for(Korisnik k : svi) {
+//			if(k.getUloga().equals(Uloga.TRENER)) {
+//				System.out.println("uslo");
+//				treneri.add(k);
+//			}
+//		}
 		return treneri;
 	}
 	

@@ -20,6 +20,7 @@ import web2022.model.Clanarina;
 import web2022.model.Korisnik;
 import web2022.model.Clanarina.TipCl;
 import web2022.model.Korisnik.Pol;
+import web2022.model.Korisnik.Uloga;
 
 public class KorisniciRepository {
 private String filename;
@@ -166,6 +167,18 @@ private String filename;
 			 
 			 System.out.println("nije usao");
 			 return null ;
+		}
+		public ArrayList<Korisnik> getTreneri(){
+			ArrayList<Korisnik> svi=getAll();
+			ArrayList<Korisnik> treneri = new ArrayList<Korisnik>();
+			for(Korisnik k : svi) {
+				if(k.getUloga().equals(Uloga.TRENER)) {
+					System.out.println("uslo");
+					treneri.add(k);
+				}
+			}
+			return treneri;
+			
 		}
 			
 	

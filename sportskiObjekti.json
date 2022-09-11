@@ -1,11 +1,12 @@
-
 [
     {
         "id": 1655678993188,
         "naziv": "Non Stop Fitness",
         "tip": "TERETANA",
-        "sadrzaj":["SAUNA"],
-        "status":"OTVORENO",
+        "sadrzaj": [
+            "SAUNA"
+        ],
+        "status": "OTVORENO",
         "lokacija": {
             "geografskaDuzina": 16.4,
             "geografskaSirina": 55.0,
@@ -19,9 +20,11 @@
     {
         "id": 1655679744498,
         "naziv": "Slana Bara",
-        "sadrzaj":["SAUNA"],
         "tip": "BAZEN",
-        "status":"OTVORENO",
+        "sadrzaj": [
+            "SAUNA"
+        ],
+        "status": "OTVORENO",
         "lokacija": {
             "geografskaDuzina": 16.4,
             "geografskaSirina": 55.0,
@@ -36,8 +39,10 @@
         "id": 1655680482298,
         "naziv": "Muscle Gym",
         "tip": "TERETANA",
-        "sadrzaj":["SAUNA"],
-        "status":"OTVORENO",
+        "sadrzaj": [
+            "SAUNA"
+        ],
+        "status": "OTVORENO",
         "lokacija": {
             "geografskaDuzina": 16.4,
             "geografskaSirina": 55.0,
@@ -52,8 +57,11 @@
         "id": 1655715933817,
         "naziv": "Naziv",
         "tip": "TERETANA",
-        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
-        "status":"OTVORENO",
+        "sadrzaj": [
+            "SAUNA",
+            "GRUPNI_TRENING"
+        ],
+        "status": "OTVORENO",
         "lokacija": {
             "geografskaDuzina": 16.4,
             "geografskaSirina": 55.0,
@@ -68,8 +76,11 @@
         "id": 1655715934728,
         "naziv": "Naziv",
         "tip": "TERETANA",
-        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
-        "status":"OTVORENO",
+        "sadrzaj": [
+            "SAUNA",
+            "GRUPNI_TRENING"
+        ],
+        "status": "OTVORENO",
         "lokacija": {
             "geografskaDuzina": 16.4,
             "geografskaSirina": 55.0,
@@ -84,8 +95,11 @@
         "id": 1655715935469,
         "naziv": "Naziv",
         "tip": "TERETANA",
-        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
-        "status":"OTVORENO",
+        "sadrzaj": [
+            "SAUNA",
+            "GRUPNI_TRENING"
+        ],
+        "status": "OTVORENO",
         "lokacija": {
             "geografskaDuzina": 16.4,
             "geografskaSirina": 55.0,
@@ -100,8 +114,11 @@
         "id": 1655715936262,
         "naziv": "Naziv",
         "tip": "TERETANA",
-        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
-        "status":"OTVORENO",
+        "sadrzaj": [
+            "SAUNA",
+            "GRUPNI_TRENING"
+        ],
+        "status": "OTVORENO",
         "lokacija": {
             "geografskaDuzina": 16.4,
             "geografskaSirina": 55.0,
@@ -116,8 +133,11 @@
         "id": 1655715943578,
         "naziv": "Naziv",
         "tip": "TERETANA",
-        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
-        "status":"OTVORENO",
+        "sadrzaj": [
+            "SAUNA",
+            "GRUPNI_TRENING"
+        ],
+        "status": "OTVORENO",
         "lokacija": {
             "geografskaDuzina": 16.4,
             "geografskaSirina": 55.0,
@@ -132,8 +152,11 @@
         "id": 1655715945886,
         "naziv": "Naziv",
         "tip": "TERETANA",
-        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
-        "status":"OTVORENO",
+        "sadrzaj": [
+            "SAUNA",
+            "GRUPNI_TRENING"
+        ],
+        "status": "OTVORENO",
         "lokacija": {
             "geografskaDuzina": 16.4,
             "geografskaSirina": 55.0,
@@ -148,8 +171,11 @@
         "id": 1655715947981,
         "naziv": "Naziv",
         "tip": "TERETANA",
-        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
-        "status":"OTVORENO",
+        "sadrzaj": [
+            "SAUNA",
+            "GRUPNI_TRENING"
+        ],
+        "status": "OTVORENO",
         "lokacija": {
             "geografskaDuzina": 16.4,
             "geografskaSirina": 55.0,
@@ -164,8 +190,10 @@
         "id": 6747384374,
         "naziv": "Play",
         "tip": "PLESNI_STUDIO",
-        "sadrzaj":["SAUNA"],
-        "status":"OTVORENO",
+        "sadrzaj": [
+            "SAUNA"
+        ],
+        "status": "OTVORENO",
         "lokacija": {
             "geografskaDuzina": 16.4,
             "geografskaSirina": 55.0,
@@ -176,4 +204,6 @@
         "pocetakRadnogVremena": "06:00",
         "krajRadnogVremena": "16:00"
     }
+    
+   
 ]

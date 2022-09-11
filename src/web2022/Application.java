@@ -117,12 +117,14 @@ public class Application {
 		get("rest/trening/getTreneri/:naziv", TreningController.getTreneriZaSportskiObjekat);
 		get("rest/trening/getTreninzi/:naziv", TreningController.getTreninziZaSportskiObjekat);
 		get("rest/trening/getTrenerTreninzi/:kIme", TreningController.getTreninziZaTrenera);
+		
 		post("rest/trening/addTrening",TreningController.addTrening);
+		
 		get("rest/korisnik/getTreneri", KorisnikController.getTreneri);
 		get("rest/trening/search", TreningController.search);
-		
-		
-		
+		//dodato
+		get("/rest/menadzer/getSadrzaj",KorisnikController.getSadrzajj);
+		//dd
 		get("/", serveStaticResource);
 		put("rest/teretana/login",KorisnikController.getbyID);
 		

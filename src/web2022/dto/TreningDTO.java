@@ -20,7 +20,7 @@ public class TreningDTO {
 	private String naziv;
 	private String tipTreninga;
 	private String objekatGdePripada;
-	private double trajanje;
+	private int trajanje;
 	public String nazivTrenera;
 	private String opis;
 	private String slika;

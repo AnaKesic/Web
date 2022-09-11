@@ -25,7 +25,7 @@ public class Trening implements Serializable {
 	private String naziv;
 	private String tipTreninga;
 	private String objekatGdePripada;
-	private double trajanje;
+	private int trajanje;
 	private Korisnik trener;
 	private String opis;
 	private String slika;

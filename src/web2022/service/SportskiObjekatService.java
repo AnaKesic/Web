@@ -104,7 +104,7 @@ public class SportskiObjekatService {
 	}
 	public SportskiObjekat getByName(String naziv) {
 		ArrayList<SportskiObjekat> sportskiObjekti =getAll();
-		SportskiObjekat ret = null;
+		SportskiObjekat ret =new SportskiObjekat();
 		for(SportskiObjekat s : sportskiObjekti ) {
 			if(s.getNaziv().equals(naziv)) {
 				ret=s;
@@ -113,4 +113,6 @@ public class SportskiObjekatService {
 		}
 		return ret;
 	}
+	
+	
 }
