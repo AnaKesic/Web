@@ -118,6 +118,9 @@ public class Application {
 		put("rest/test/update-test", TestController.updateTest);
 		
 		get("rest/test/get-all", TestController.getAll);
+		get("rest/korisnik/getall",KorisnikController.getAll);
+		
+		post("rest/clanarina/add", KorisnikController.addClanarina);
 		
 		delete("rest/test/delete-test/:id", TestController.deleteTest);
 		post("rest/file/upload", FileController.upload);

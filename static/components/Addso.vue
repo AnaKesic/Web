@@ -431,9 +431,8 @@ methods:{
               console.log("anaa")
               this.$emit('close-addso', false);  
             })
-            .catch(e => {
-              this.$emit('close-addso', false);  
-            })
+            
+            
 
             
       },

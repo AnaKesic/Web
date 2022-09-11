@@ -1,9 +1,13 @@
 package web2022.service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
+import web2022.dto.ClanarinaDTO;
 import web2022.dto.KorisnikDTO;
 import web2022.dto.TestDTO;
+import web2022.model.Clanarina;
+import web2022.model.Clanarina.TipCl;
 import web2022.model.Korisnik;
 import web2022.model.Korisnik.Uloga;
 import web2022.model.Test;
@@ -65,5 +69,12 @@ public class KorisnikService {
 			}
 		}
 		return slobodni;
+	}
+	public Korisnik addClanarina(ClanarinaDTO clan) {
+		System.out.println("ana");
+		Korisnik k= korisnikRepository.changeClanarina(clan);
+		System.out.println("ana");
+		return k;
+		
 	}
 }

@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -13,8 +14,11 @@ import com.google.gson.JsonIOException;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 
+import web2022.dto.ClanarinaDTO;
 import web2022.dto.KorisnikDTO;
+import web2022.model.Clanarina;
 import web2022.model.Korisnik;
+import web2022.model.Clanarina.TipCl;
 import web2022.model.Korisnik.Pol;
 
 public class KorisniciRepository {
@@ -114,6 +118,55 @@ private String filename;
 				}
 			return null;
 			}
+		public Korisnik changeClanarina(ClanarinaDTO clan) {
+			 ArrayList<Korisnik> svi=this.getAll();
+			 LocalDateTime sad= LocalDateTime.now();
+			 LocalDateTime kraj=sad.plusDays(30);
+			
+			 for (int i = 0; i < svi.size(); i++) {
+					if(svi.get(i).getKorisnickoIme().equals(clan.getKupac())) {
+					 System.out.println(clan.getKupac());
+					 if(clan.getId().equals("basicpackg")) {
+					 svi.get(i).getClanarina().setTip(TipCl.MESECNA);
+					 svi.get(i).getClanarina().setDatumPlacanja(sad);
+					 svi.get(i).getClanarina().setDatumVazenja(kraj);
+					 svi.get(i).getClanarina().setBrTermina(12);
+					 svi.get(i).getClanarina().setCena(2000);
+					 svi.get(i).getClanarina().setKorisnik(svi.get(i).getKorisnickoIme());
+					 svi.get(i).getClanarina().setStatus(true);}
+					 
+					 else if(clan.getId().equals("godispackg")) {
+						 svi.get(i).getClanarina().setTip(TipCl.GODISNJA);
+						 svi.get(i).getClanarina().setDatumPlacanja(sad);
+						 svi.get(i).getClanarina().setDatumVazenja(kraj);
+						 svi.get(i).getClanarina().setBrTermina(365);
+						 svi.get(i).getClanarina().setCena(20000);
+						 svi.get(i).getClanarina().setKorisnik(svi.get(i).getKorisnickoIme());
+						 svi.get(i).getClanarina().setStatus(true);}
+					 else {
+						 svi.get(i).getClanarina().setTip(TipCl.MESECNA);
+						 svi.get(i).getClanarina().setDatumPlacanja(sad);
+						 svi.get(i).getClanarina().setDatumVazenja(kraj);
+						 svi.get(i).getClanarina().setBrTermina(30);
+						 svi.get(i).getClanarina().setCena(3000);
+						 svi.get(i).getClanarina().setKorisnik(svi.get(i).getKorisnickoIme());
+						 svi.get(i).getClanarina().setStatus(true);
+						 
+					 }
+					 System.out.println(svi.get(i).getClanarina().getKorisnik());
+					 this.saveAll(svi);
+					 
+					
+					 return svi.get(i);
+				 }
+				
+					 
+			 }
+			 
+			 
+			 System.out.println("nije usao");
+			 return null ;
+		}
 			
 	
 }

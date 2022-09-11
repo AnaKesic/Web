@@ -13,13 +13,10 @@
   <v-btn  >
        Početna strana
     </v-btn>
-    <v-btn  >
-       Prijavi trening
-    </v-btn>
     <v-btn @click="Treninzi" >
        Moji treninzi
     </v-btn>
-    <v-btn  >
+    <v-btn @click="Clanarinna" >
        Kupi članarinu
     </v-btn>
     <v-btn  @click="ProfilMode" >
@@ -34,7 +31,7 @@
 
 
 <template v-if="pocetna">
-   <Card></Card>
+   <Cardkupac></Cardkupac>
 </template>
 <template v-if="profil">
    <Profsettings :id=idd ></Profsettings>
@@ -42,6 +39,9 @@
 
 <template v-if="treninzi">
    <Kupactreninzi></Kupactreninzi>
+</template>
+<template v-if="clanarina">
+   <Kupiclanarinu v-on:close-addclan="clanarina = false, pocetna = true"></Kupiclanarinu>
 </template>
 
  
@@ -93,6 +93,16 @@ module.exports={
          this.clanarina=false,
 
          this.prijavitrening=false
+         
+      },
+      Clanarinna(){
+         this.clanarina=true;
+         this.profil=false,
+         this.pocetna=false,
+         this.treninzi=false
+         
+
+       
          
       }
    }

@@ -2,6 +2,7 @@ package web2022.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -12,6 +13,7 @@ import lombok.Setter;
 import web2022.dto.KorisnikDTO;
 import web2022.dto.TestDTO;
 import web2022.dto.UserDTO;
+import web2022.model.Clanarina.TipCl;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -67,7 +69,7 @@ public class Korisnik implements Serializable {
 		if(kDTO.getUloga().equals(Uloga.TRENER)) {
 			this.uloga=Uloga.TRENER;}
 		this.istorijaTreninga= new ArrayList<Trening>() ;
-		this.clanarina=new Clanarina();
+		this.clanarina=new Clanarina(TipCl.MESECNA,LocalDateTime.now(),LocalDateTime.now(),200,"",false,12);
 		this.sportskiObjekat=kDTO.getSportskiObjekat();
 		this.poseceniObjekti=new ArrayList<>();
 		this.brojSakupljenihBodova=0;
@@ -77,7 +79,9 @@ public class Korisnik implements Serializable {
 		this.blokiran=false;
 		this.obrisan=false;
 		
+	
 		
 	}
+	
 
 }

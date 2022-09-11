@@ -22,7 +22,7 @@
     <v-btn @click="SOMode" >
        Kreiraj sportski objekat
     </v-btn>
-    <v-btn  >
+    <v-btn  @click="kupciii">
        Kupci
     </v-btn>
     <v-btn   >
@@ -54,6 +54,9 @@
 </template>
 <template v-if="menadzer">
    <Addmen v-on:close-addmen="menadzer = false, kupac = true"></Addmen>
+</template>
+<template v-if="kupci">
+   <Showkup></Showkup>
 </template>
 
 
@@ -144,6 +147,18 @@ module.exports={
          this.objekat=false,
          
          this.kupci=false,
+         this.komentari=false
+
+      },
+      kupciii(){
+         this.profil=false,
+         this.pocetna=false,
+         this.trener=false,
+         this.menadzer=false,
+
+         this.objekat=false,
+         
+         this.kupci=true,
          this.komentari=false
 
       }
