@@ -16,6 +16,7 @@ import web2022.dto.SportskiObjekatSearchDTO;
 import web2022.dto.TestDTO;
 import web2022.model.SportskiObjekat;
 import web2022.model.Test;
+import web2022.model.Trening;
 
 public class SportskiObjekatController {
 	
@@ -36,6 +37,7 @@ public class SportskiObjekatController {
 		String returnToFront = gson.toJson(newSportskiObjekat);
 		return returnToFront;
 	};
+	
 	
 	public static Route search = (Request request, Response response) -> {
 		System.out.print("why");

@@ -17,6 +17,7 @@ import web2022.model.SportskiObjekat.Sadrzaj;
 import web2022.model.SportskiObjekat.Status;
 import web2022.model.SportskiObjekat.Tip;
 import web2022.model.Test;
+import web2022.model.Trening;
 import web2022.repository.SportskiObjekatRepository;
 import web2022.repository.TestRepository;
 
@@ -43,7 +44,7 @@ public class SportskiObjekatService {
 		
 		return sportskiObjekat;
 	}
-
+   
 	public ArrayList<SportskiObjekat> search(SportskiObjekatSearchDTO ss) {
 	
 		ArrayList<SportskiObjekat> trazeniObjekti = new ArrayList<SportskiObjekat>();

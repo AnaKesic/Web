@@ -50,6 +50,18 @@ private TreninziRepository treningRepository;
 		}
 		return treninzi;
 	}
+	public ArrayList<Trening> getbynaziv(String naziv){
+		ArrayList<Trening> svi=getAll();
+		ArrayList<Trening> povrat=new ArrayList<Trening>();
+		for(Trening t:svi) {
+			if(t.getObjekatGdePripada().equals(naziv)) {
+				povrat.add(t);
+			}
+			
+		}
+		   System.out.println("ana");
+		   return povrat;
+	   }
 
 	
 	

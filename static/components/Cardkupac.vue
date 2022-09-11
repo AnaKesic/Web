@@ -115,6 +115,7 @@
                                                         dark
                                                         v-bind="attrs"
                                                         v-on="on"
+                                                        @click="slobodniTermini(sportskiObjekat.naziv)"
                                                         >
                                                         Zakaži trening
                                                         </v-btn>
@@ -243,7 +244,17 @@
           },
           Zakazitrening(){
             this.prikaztrening=true
+          },
+          slobodniTermini(obj){
+            console.log(obj)
+           
+           
+             var p=obj
+             axios.get("http://localhost:8080/rest/sportski-objekat/getbynaziv", p)
+               .then(r => {
+               console.log(r.data)
+                console.log("nesto")
+          })
           }
-          }
-  }
+  }}
   </script>

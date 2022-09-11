@@ -1,6 +1,8 @@
 package web2022.repository;
 
 import static web2022.Application.gson;
+import static web2022.Application.sportskiObjekatService;
+import static web2022.utils.Responses.serverError;
 
 import java.io.File;
 import java.io.FileReader;
@@ -14,8 +16,11 @@ import com.google.gson.JsonIOException;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 
-
+import spark.Request;
+import spark.Response;
+import spark.Route;
 import web2022.model.Trening;
+import web2022.service.TreningService;
 
 public class TreninziRepository {
 private String filename;
@@ -59,5 +64,6 @@ private String filename;
 			return tests;
 		}
 	}
+	
 
 }

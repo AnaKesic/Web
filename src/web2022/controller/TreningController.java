@@ -3,6 +3,7 @@ package web2022.controller;
 import static web2022.Application.gson;
 
 import static web2022.Application.treningService;
+import static web2022.utils.Responses.serverError;
 
 import java.util.ArrayList;
 
@@ -13,6 +14,7 @@ import web2022.dto.KorisnikIspisDTO;
 import web2022.dto.TreningDTO;
 import web2022.model.Korisnik;
 import web2022.model.Trening;
+import web2022.service.TreningService;
 
 public class TreningController {
 	 public static Route  getTreneriZaSportskiObjekat =(Request request, Response response) -> {
@@ -49,5 +51,16 @@ public class TreningController {
 		
 		 
 	 };
+	 public static Route getbynaziv = (Request request, Response response) -> {
+			String payload = request.body();
+			
+			ArrayList<Trening> listaTreninga = treningService.getbynaziv(payload);
+			if(listaTreninga == null) {
+				return serverError("sportski objekat sa istim id postoji", response);
+			}
+			System.out.println("usao");
+			String returnToFront = gson.toJson(listaTreninga);
+			return returnToFront; 
+		};
 
 }

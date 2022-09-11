@@ -10,6 +10,7 @@ import web2022.controller.FileController;
 import web2022.controller.KorisnikController;
 import web2022.controller.SportskiObjekatController;
 import web2022.controller.TestController;
+import web2022.controller.TreningController;
 import web2022.service.FileService;
 import web2022.service.KorisnikService;
 import web2022.service.SportskiObjekatService;
@@ -90,6 +91,7 @@ public class Application {
 		fileService = new FileService();
 	    sportskiObjekatService = new SportskiObjekatService();
 		korisnikService= new KorisnikService();
+		treningService=new TreningService();
 		
 		
 		uploadDir = new File(System.getProperty("user.dir") + "/static/files/upload");
@@ -107,6 +109,7 @@ public class Application {
        	post("rest/sportski-objekat/add-sportski-objekat", SportskiObjekatController.addSportskiObjekat);
         get("rest/sportski-objekat/get-all", SportskiObjekatController.getAll);
 		get("rest/sportski-objekat/search", SportskiObjekatController.search);
+		get("rest/sportski-objekat/getbynaziv",TreningController.getbynaziv);
 
 		get("/", serveStaticResource);
 		put("rest/teretana/login",KorisnikController.getbyID);

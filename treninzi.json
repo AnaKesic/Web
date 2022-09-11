@@ -2,7 +2,7 @@
         "id": 1.66015585E12,
         "naziv": "Lep trening",
         "tipTreninga": "Grupni",
-        "objekatGdePripada": "Naziv",
+        "objekatGdePripada": "Slana bara",
         "trajanje": 5.0,
         "trener":{
          "id": 1.66094449E12,
@@ -31,7 +31,7 @@
         "id": 1.66015585E12,
         "naziv": "Telo iz snova",
         "tipTreninga": "Personalni",
-        "objekatGdePripada": "Naziv",
+        "objekatGdePripada": "Slana bara",
         "trajanje": 1.0,
         "trener":{
          "id": 1.66094449E12,
