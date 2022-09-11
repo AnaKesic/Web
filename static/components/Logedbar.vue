@@ -3,7 +3,7 @@
         color="red"
         dense
         flat>
-      <v-toolbar-title> Ime teretane</v-toolbar-title>
+        <v-toolbar-title> Ana&Tanja GymPass</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
@@ -22,7 +22,13 @@
 
 undefined
  module.exports = {
-    name: 'Logedbar'
+    name: 'Logedbar',
+    methods:{
+      kk(){
+        this.$router.push('/'); 
+      }
+
+    }
  }
 
 </script>

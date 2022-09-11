@@ -13,9 +13,6 @@
   <v-btn  @click="tren" >
     Treninzi
     </v-btn>
-    <v-btn  @click="it">
-       Istorija treninga
-    </v-btn>
     <v-btn  @click="ProfilMode" >
        Moj profil 
     </v-btn>
@@ -34,11 +31,6 @@
 <template v-if="profil">
    <Profsettings :id=idd ></Profsettings>
    <v-row justify="center">
-   <v-btn color="red"  @click="nazad">Nazad</v-btn>
-   </v-row>
-</template>
-<template v-if="istorija">
-    <v-row justify="center">
    <v-btn color="red"  @click="nazad">Nazad</v-btn>
    </v-row>
 </template>
@@ -70,7 +62,6 @@ module.exports={
         return{
             idd: this.$route.params.username,
             pocetna:true,
-            istorija:false,
             treninzii:false,
             profil:false
             
@@ -80,22 +71,15 @@ module.exports={
   methods:{
       ProfilMode(){
         this.pocetna=false,
-        this.istorija=false,
+        
         this.komentari=false,
         this.profil=true,
         this.treninzii=false
       },
-      it(){
-        this.pocetna=false,
-        this.istorija=true,
-        this.komentari=false,
-        this.profil=false,
-        this.treninzii=false
-
-      },
+      
       tren(){
         this.pocetna=false,
-        this.istorija=false,
+      
         this.komentari=false,
         this.profil=false,
         this.treninzii=true
@@ -103,7 +87,7 @@ module.exports={
       },
       nazad(){
         this.pocetna=true,
-        this.istorija=false,
+  
         this.komentari=false,
         this.profil=false,
         this.treninzii=false

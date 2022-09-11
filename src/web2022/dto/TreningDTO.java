@@ -22,6 +22,8 @@ public class TreningDTO {
 	public String nazivTrenera;
 	private String opis;
 	private String slika;
+
+	
 	
 	
 	public TreningDTO(Trening trening) {
@@ -32,7 +34,17 @@ public class TreningDTO {
 		this.nazivTrenera = trening.getTrener().getKorisnickoIme();
 		this.opis = trening.getOpis();
 		this.slika = trening.getSlika();
+	
 
+
+	}
+	public TreningDTO(String objekat,String tip) {
+		
+		
+		this.objekatGdePripada = objekat;
+		this.tipTreninga = tip;
+		
+		
 	}
 
 }

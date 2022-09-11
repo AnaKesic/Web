@@ -29,7 +29,8 @@
 
 
 <template v-if="pocetna">
-   <Card></Card>
+   <Card :id=idd>
+  </Card>
 </template>
 <template v-if="profil">
    <Profsettings :id=idd ></Profsettings>

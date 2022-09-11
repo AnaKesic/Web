@@ -118,8 +118,12 @@
 <script>
 module.exports={
    name:"Card",
+   props:{
+        id:String
+    },
    data(){
      return {
+      
         sportskiObjekti:null,
         search_params:{
          naziv: '',
@@ -191,8 +195,9 @@ module.exports={
            }
     },
      prikazi: function(sportskiObjekat){
-            window.location.href = "#/jedanSportskiObjekat/"+sportskiObjekat.naziv;
-        },
+      this.$router.push({name:'spobjekat', params: {naziv: sportskiObjekat.naziv,kor: this.id}});
+        
+        }
 
         }
 }

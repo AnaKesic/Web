@@ -3,10 +3,12 @@ package web2022.service;
 import java.util.ArrayList;
 
 import web2022.dto.KorisnikDTO;
+import web2022.dto.SportskiObjekatSearchDTO;
 import web2022.dto.TreningDTO;
 import web2022.model.Korisnik;
+import web2022.model.SportskiObjekat;
 import web2022.model.Trening;
-
+import web2022.model.SportskiObjekat.Status;
 import web2022.repository.TreninziRepository;
 
 
@@ -77,6 +79,27 @@ private TreninziRepository treningRepository;
 			}
 		}
 		}
+		return treninzi;
+	}
+	public ArrayList<Trening> search(TreningDTO tt) {
+		
+		ArrayList<Trening> treninzi = new ArrayList<Trening>();
+		for(Trening tr: getAll()) {
+			if(tr.getObjekatGdePripada().toLowerCase().contains(tt.getObjekatGdePripada().toLowerCase())) {
+				if(tr.getTipTreninga().toLowerCase().contains(tt.getTipTreninga().toLowerCase()) || tt.getTipTreninga().toUpperCase().equals("SVI")) {
+					
+					treninzi.add(tr);
+				
+			
+			}
+		
+		}
+		}
+		
+			
+		
+			
+		
 		return treninzi;
 	}
 	

@@ -111,6 +111,7 @@ public class Application {
 		get("rest/trening/getTrenerTreninzi/:kIme", TreningController.getTreninziZaTrenera);
 		post("rest/trening/addTrening",TreningController.addTrening);
 		get("rest/korisnik/getTreneri", KorisnikController.getTreneri);
+		get("rest/trening/search", TreningController.search);
 		
 		get("/", serveStaticResource);
 		put("rest/teretana/login",KorisnikController.getbyID);

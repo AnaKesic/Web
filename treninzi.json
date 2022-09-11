@@ -2,7 +2,7 @@
     {
         "id": 1660155850000,
         "naziv": "Lep trening",
-        "tipTreninga": "Grupni",
+        "tipTreninga": "GRUPNI",
         "objekatGdePripada": "Naziv",
         "trajanje": 5.0,
         "trener": {
@@ -26,12 +26,13 @@
             "obrisan": false
         },
         "opis": "Trening za opustanje uz veliki broj ljudi!",
-        "slika": "KUPAC"
+        "slika": "KUPAC",
+        "cena":500
     },
     {
-        "id": 1660155850000,
+        "id": 1660154850000,
         "naziv": "Telo iz snova",
-        "tipTreninga": "Personalni",
+        "tipTreninga": "PERSONALNI",
         "objekatGdePripada": "Naziv",
         "trajanje": 1.0,
         "trener": {
@@ -55,6 +56,7 @@
             "obrisan": false
         },
         "opis": "Trening za telo iz snova!",
-        "slika": "KUPAC"
+        "slika": "KUPAC",
+        "cena":5300
     }
 ]

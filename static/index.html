@@ -57,7 +57,7 @@
         Vue.component("Profsettings", httpVueLoader("components/Profsettings.vue"))
         Vue.component("Logedbar", httpVueLoader("components/Logedbar.vue"))
          Vue.component("Trenertreninzi", httpVueLoader("components/Trenertreninzi.vue"))
-       
+      
         const routes = [
             {
                 path: "/",
@@ -100,7 +100,7 @@
             },
             {
                 path:"/MENADZER/:username",
-                name:"menadzer",
+                name:"menadzerr",
                 component:httpVueLoader("views/Menadzer.vue"),
                 props:true
            },
@@ -108,7 +108,12 @@
                  path:"/objekat/:id",
                  name:"objekat",
                  component:httpVueLoader("views/Object.vue")
-            }
+            },
+            {
+                path:"/jedanSportskiObjekat/:naziv/:kor",
+                name:"spobjekat",
+                component:httpVueLoader("views/Sobjekat.vue")
+           }
         ];
 
 

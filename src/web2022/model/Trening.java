@@ -30,6 +30,8 @@ public class Trening implements Serializable {
 	private String opis;
 	private String slika;
 	
+	
+	
 	public Trening(TreningDTO tDTO) {
 		
 		this.naziv = tDTO.getNaziv();
@@ -39,7 +41,7 @@ public class Trening implements Serializable {
 		this.trener = new Korisnik();
 		this.opis = tDTO.getOpis();
 		this.slika = tDTO.getSlika();
-		
+			
 		
 	}
 	

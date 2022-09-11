@@ -2,6 +2,7 @@ package web2022.controller;
 
 import static web2022.Application.gson;
 import static web2022.Application.korisnikService;
+import static web2022.Application.sportskiObjekatService;
 import static web2022.Application.treningService;
 import static web2022.utils.Responses.serverError;
 
@@ -12,8 +13,10 @@ import spark.Response;
 import spark.Route;
 import web2022.dto.KorisnikDTO;
 import web2022.dto.KorisnikIspisDTO;
+import web2022.dto.SportskiObjekatSearchDTO;
 import web2022.dto.TreningDTO;
 import web2022.model.Korisnik;
+import web2022.model.SportskiObjekat;
 import web2022.model.Trening;
 
 public class TreningController {
@@ -77,5 +80,15 @@ public class TreningController {
 		
 		 
 	 };
+	 public static Route search = (Request request, Response response) -> {
+			System.out.print("nope");
+			String objekatGdePripada = request.queryParams("objekatGdePripada");
+			String tipTreninga= request.queryParams("tipTreninga");
+			//Integer cena=Integer.parseInt(request.params("cena"));
+			TreningDTO parametres = new TreningDTO(objekatGdePripada, tipTreninga);
+			ArrayList<Trening> treninzi = treningService.search(parametres);
+			String returnToFront = gson.toJson(treninzi);
+			return returnToFront;
+		};
 
 }
