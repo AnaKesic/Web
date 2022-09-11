@@ -111,6 +111,18 @@ public class Application {
 		get("rest/sportski-objekat/search", SportskiObjekatController.search);
 		get("rest/sportski-objekat/getbynaziv",TreningController.getbynaziv);
 
+		
+		get("rest/ucitajobjmen/:naziv", SportskiObjekatController.ucitajObjMen);
+		get("rest/korisnik/getKupci/:naziv", KorisnikController.getKupciZaSportskiObjekat);
+		get("rest/trening/getTreneri/:naziv", TreningController.getTreneriZaSportskiObjekat);
+		get("rest/trening/getTreninzi/:naziv", TreningController.getTreninziZaSportskiObjekat);
+		get("rest/trening/getTrenerTreninzi/:kIme", TreningController.getTreninziZaTrenera);
+		post("rest/trening/addTrening",TreningController.addTrening);
+		get("rest/korisnik/getTreneri", KorisnikController.getTreneri);
+		get("rest/trening/search", TreningController.search);
+		
+		
+		
 		get("/", serveStaticResource);
 		put("rest/teretana/login",KorisnikController.getbyID);
 		

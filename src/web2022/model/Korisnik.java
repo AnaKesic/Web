@@ -41,7 +41,7 @@ public class Korisnik implements Serializable {
 	private Clanarina clanarina;  // za korisnika
 	private String sportskiObjekat; // za menadzera
 
-	private ArrayList<SportskiObjekat> poseceniObjekti; // sve porudzbine dostavljaca koje treba da dostavi
+	private ArrayList<String> poseceniObjekti; // sve porudzbine dostavljaca koje treba da dostavi
 	private double brojSakupljenihBodova;
 	private TipKupca tipKupca;
 	private double popust; // u procentima
@@ -71,7 +71,7 @@ public class Korisnik implements Serializable {
 		this.istorijaTreninga= new ArrayList<Trening>() ;
 		this.clanarina=new Clanarina(TipCl.MESECNA,LocalDateTime.now(),LocalDateTime.now(),200,"",false,12);
 		this.sportskiObjekat=kDTO.getSportskiObjekat();
-		this.poseceniObjekti=new ArrayList<>();
+		this.poseceniObjekti=new ArrayList<String>();
 		this.brojSakupljenihBodova=0;
 		this.tipKupca=TipKupca.BRONZANI;
 		this.popust=0;

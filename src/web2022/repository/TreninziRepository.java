@@ -65,5 +65,22 @@ private String filename;
 		}
 	}
 	
+	public Trening add(Trening newTest) {
+		ArrayList<Trening> tests = getAll();
+		boolean exist = false;
+		for(Trening test : tests) {
+			if(test.getNaziv().equals(newTest.getNaziv())) {
+				exist = true;
+				break;
+			}
+		}
+		if(!exist) {
+			tests.add(newTest);
+			saveAll(tests);
+			return newTest;
+		}
+		return null;
+	}
+	
 
 }

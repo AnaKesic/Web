@@ -16,7 +16,9 @@ import web2022.dto.SportskiObjekatSearchDTO;
 import web2022.dto.TestDTO;
 import web2022.model.SportskiObjekat;
 import web2022.model.Test;
+
 import web2022.model.Trening;
+
 
 public class SportskiObjekatController {
 	
@@ -38,7 +40,9 @@ public class SportskiObjekatController {
 		return returnToFront;
 	};
 	
+
 	
+
 	public static Route search = (Request request, Response response) -> {
 		System.out.print("why");
 		String naziv = request.queryParams("naziv");
@@ -49,6 +53,14 @@ public class SportskiObjekatController {
 		SportskiObjekatSearchDTO parametres = new SportskiObjekatSearchDTO(naziv, tip, lokacija, prosecnaOcena, samoOtvoreni);
 		ArrayList<SportskiObjekat> sportskiObjekti = sportskiObjekatService.search(parametres);
 		String returnToFront = gson.toJson(sportskiObjekti);
+		return returnToFront;
+	};
+
+	public static Route ucitajObjMen = (Request request, Response response) -> {
+ 	String naziv = request.params(":naziv");
+		SportskiObjekat sportskiObjekat = sportskiObjekatService.getByName(naziv);
+	
+		String returnToFront = gson.toJson(sportskiObjekat);
 		return returnToFront;
 	};
 

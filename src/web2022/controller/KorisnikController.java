@@ -11,6 +11,8 @@ import spark.Response;
 import spark.Route;
 import web2022.dto.ClanarinaDTO;
 import web2022.dto.KorisnikDTO;
+import web2022.dto.KorisnikIspisDTO;
+import web2022.dto.KorisnikMenDTO;
 import web2022.model.Korisnik;
 import web2022.model.Test;
 import web2022.service.KorisnikService;
@@ -97,4 +99,40 @@ public class KorisnikController {
 			System.out.println(returnToFront);
 			return returnToFront;
 		};
+		 public static Route  getKupciZaSportskiObjekat =(Request request, Response response) -> {
+			 String naziv = request.params(":naziv");
+			 ArrayList<Korisnik> kupci = korisnikService.getKupcii(naziv);
+			 ArrayList<KorisnikIspisDTO> kupcifront= new ArrayList<KorisnikIspisDTO>();
+			 for(Korisnik k:kupci) {
+				 
+				 KorisnikIspisDTO kk=new KorisnikIspisDTO();
+				 kk.setIme(k.getIme());
+				 kk.setKIme(k.getKorisnickoIme());
+				 kk.setPrezime(k.getPrezime());
+				 kupcifront.add(kk);
+				 
+			 }
+				String returnToFront = gson.toJson(kupcifront);
+				return returnToFront;
+				
+			
+			 
+		 };
+		 public static Route  getTreneri =(Request request, Response response) -> {
+			 
+			 ArrayList<Korisnik> treneri = korisnikService.getTreneri();
+			 ArrayList<KorisnikMenDTO> trenerifront= new ArrayList<KorisnikMenDTO>();
+			
+				
+				for(Korisnik t : treneri) {
+					trenerifront.add(new KorisnikMenDTO(t));
+				}
+				
+				String returnToFront = gson.toJson(trenerifront);
+				return returnToFront;
+				
+			
+			 
+		 };
+		 
 }

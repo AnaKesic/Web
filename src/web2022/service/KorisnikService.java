@@ -77,4 +77,31 @@ public class KorisnikService {
 		return k;
 		
 	}
+	
+	public ArrayList<Korisnik> getKupcii(String naziv) {
+		ArrayList<Korisnik> kupci = new ArrayList<Korisnik>();
+		for (Korisnik k : getAll()) {
+			for (String pos : k.getPoseceniObjekti()) {
+				 
+				if (pos.toLowerCase().equals(naziv.toLowerCase())) {
+					kupci.add(k);
+					
+		        }
+				
+			}
+		}
+		return kupci;
+	}
+	public ArrayList<Korisnik> getTreneri() {
+		ArrayList<Korisnik> treneri = new ArrayList<Korisnik>();
+		for(Korisnik k : getAll()) {
+			if(k.getUloga()==(Uloga.TRENER)) {
+				treneri.add(k);
+			}
+		}
+		return treneri;
+	}
+	
+	
+	
 }

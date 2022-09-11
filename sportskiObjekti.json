@@ -1,1 +1,179 @@
-[{"id":1655678993188,"naziv":"Non Stop Fitness","tip":"TERETANA","sadrzaj":[],"status":"OTVORENO","lokacija":{"geografskaDuzina":16.4,"geografskaSirina":55.0,"adresa":"Novi Sad, Narodnih heroja 1"},"logoObjekta":"img/nonstopfitness.png","prosecnaOcena":5.0,"pocetakRadnogVremena":"00:00","krajRadnogVremena":"03:00"},{"id":1655679744498,"naziv":"Slana Bara","tip":"BAZEN","sadrzaj":[],"status":"OTVORENO","lokacija":{"geografskaDuzina":16.4,"geografskaSirina":55.0,"adresa":"Novi Sad, Sentandrejski put 106b"},"logoObjekta":"img/pool.png","prosecnaOcena":3.0,"pocetakRadnogVremena":"08:00","krajRadnogVremena":"22:00"},{"id":1655680482298,"naziv":"Muscle Gym","tip":"TERETANA","sadrzaj":[],"status":"OTVORENO","lokacija":{"geografskaDuzina":16.4,"geografskaSirina":55.0,"adresa":"Novi Sad, Kisacka 5"},"logoObjekta":"img/muscle.jpg","prosecnaOcena":4.2,"pocetakRadnogVremena":"07:00","krajRadnogVremena":"23:00"},{"id":1655715933817,"naziv":"Naziv","tip":"TERETANA","sadrzaj":["SAUNA"],"status":"OTVORENO","lokacija":{"geografskaDuzina":16.4,"geografskaSirina":55.0,"adresa":"hadhsa"},"logoObjekta":"img/profile.jpg","prosecnaOcena":5.0,"pocetakRadnogVremena":"06:00","krajRadnogVremena":"16:00"},{"id":1655715934728,"naziv":"Naziv","tip":"TERETANA","sadrzaj":["SAUNA"],"status":"OTVORENO","lokacija":{"geografskaDuzina":16.4,"geografskaSirina":55.0,"adresa":"hadhsa"},"logoObjekta":"img/profile.jpg","prosecnaOcena":5.0,"pocetakRadnogVremena":"06:00","krajRadnogVremena":"16:00"},{"id":1655715935469,"naziv":"Naziv","tip":"TERETANA","sadrzaj":["SAUNA"],"status":"OTVORENO","lokacija":{"geografskaDuzina":16.4,"geografskaSirina":55.0,"adresa":"hadhsa"},"logoObjekta":"img/profile.jpg","prosecnaOcena":5.0,"pocetakRadnogVremena":"06:00","krajRadnogVremena":"16:00"},{"id":1655715936262,"naziv":"Naziv","tip":"TERETANA","sadrzaj":["SAUNA"],"status":"OTVORENO","lokacija":{"geografskaDuzina":16.4,"geografskaSirina":55.0,"adresa":"hadhsa"},"logoObjekta":"img/profile.jpg","prosecnaOcena":5.0,"pocetakRadnogVremena":"06:00","krajRadnogVremena":"13:00"},{"id":1655715943578,"naziv":"Naziv","tip":"TERETANA","sadrzaj":["SAUNA"],"status":"OTVORENO","lokacija":{"geografskaDuzina":16.4,"geografskaSirina":55.0,"adresa":"hadhsa"},"logoObjekta":"img/profile.jpg","prosecnaOcena":5.0,"pocetakRadnogVremena":"06:00","krajRadnogVremena":"19:00"},{"id":1655715945886,"naziv":"Naziv","tip":"TERETANA","sadrzaj":["SAUNA"],"status":"OTVORENO","lokacija":{"geografskaDuzina":16.4,"geografskaSirina":55.0,"adresa":"hadhsa"},"logoObjekta":"img/profile.jpg","prosecnaOcena":5.0,"pocetakRadnogVremena":"00:00","krajRadnogVremena":"04:00"},{"id":1655715947981,"naziv":"Naziv","tip":"TERETANA","sadrzaj":["SAUNA"],"status":"OTVORENO","lokacija":{"geografskaDuzina":16.4,"geografskaSirina":55.0,"adresa":"hadhsa"},"logoObjekta":"img/profile.jpg","prosecnaOcena":5.0,"pocetakRadnogVremena":"06:00","krajRadnogVremena":"16:00"},{"id":6747384374,"naziv":"Play","tip":"PLESNI_STUDIO","sadrzaj":["SAUNA"],"status":"OTVORENO","lokacija":{"geografskaDuzina":16.4,"geografskaSirina":55.0,"adresa":"Kralja Petra 43, Novi Sad"},"logoObjekta":"img/profile.jpg","prosecnaOcena":5.0,"pocetakRadnogVremena":"06:00","krajRadnogVremena":"16:00"},{"id":1662766497346,"naziv":"jankova teretana","sadrzaj":["GRUPNI_TRENING","PERSONALNI_TRENING"],"lokacija":{"geografskaDuzina":0.0,"geografskaSirina":0.0,"adresa":"jase tomica 13, Novi Sad"},"logoObjekta":"/files/upload/nonstopfitness.png","prosecnaOcena":0.0,"pocetakRadnogVremena":"14:06","krajRadnogVremena":"01:35"}]
+
+[
+    {
+        "id": 1655678993188,
+        "naziv": "Non Stop Fitness",
+        "tip": "TERETANA",
+        "sadrzaj":["SAUNA"],
+        "status":"OTVORENO",
+        "lokacija": {
+            "geografskaDuzina": 16.4,
+            "geografskaSirina": 55.0,
+            "adresa": "Novi Sad, Narodnih heroja 1"
+        },
+        "logoObjekta": "img/nonstopfitness.png",
+        "prosecnaOcena": 5.0,
+        "pocetakRadnogVremena": "00:00",
+        "krajRadnogVremena": "03:00"
+    },
+    {
+        "id": 1655679744498,
+        "naziv": "Slana Bara",
+        "sadrzaj":["SAUNA"],
+        "tip": "BAZEN",
+        "status":"OTVORENO",
+        "lokacija": {
+            "geografskaDuzina": 16.4,
+            "geografskaSirina": 55.0,
+            "adresa": "Novi Sad, Sentandrejski put 106b"
+        },
+        "logoObjekta": "img/pool.png",
+        "prosecnaOcena": 3.0,
+        "pocetakRadnogVremena": "08:00",
+        "krajRadnogVremena": "22:00"
+    },
+    {
+        "id": 1655680482298,
+        "naziv": "Muscle Gym",
+        "tip": "TERETANA",
+        "sadrzaj":["SAUNA"],
+        "status":"OTVORENO",
+        "lokacija": {
+            "geografskaDuzina": 16.4,
+            "geografskaSirina": 55.0,
+            "adresa": "Novi Sad, Kisacka 5"
+        },
+        "logoObjekta": "img/muscle.jpg",
+        "prosecnaOcena": 4.2,
+        "pocetakRadnogVremena": "07:00",
+        "krajRadnogVremena": "23:00"
+    },
+    {
+        "id": 1655715933817,
+        "naziv": "Naziv",
+        "tip": "TERETANA",
+        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
+        "status":"OTVORENO",
+        "lokacija": {
+            "geografskaDuzina": 16.4,
+            "geografskaSirina": 55.0,
+            "adresa": "hadhsa"
+        },
+        "logoObjekta": "img/profile.jpg",
+        "prosecnaOcena": 5.0,
+        "pocetakRadnogVremena": "06:00",
+        "krajRadnogVremena": "16:00"
+    },
+    {
+        "id": 1655715934728,
+        "naziv": "Naziv",
+        "tip": "TERETANA",
+        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
+        "status":"OTVORENO",
+        "lokacija": {
+            "geografskaDuzina": 16.4,
+            "geografskaSirina": 55.0,
+            "adresa": "hadhsa"
+        },
+        "logoObjekta": "img/profile.jpg",
+        "prosecnaOcena": 5.0,
+        "pocetakRadnogVremena": "06:00",
+        "krajRadnogVremena": "16:00"
+    },
+    {
+        "id": 1655715935469,
+        "naziv": "Naziv",
+        "tip": "TERETANA",
+        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
+        "status":"OTVORENO",
+        "lokacija": {
+            "geografskaDuzina": 16.4,
+            "geografskaSirina": 55.0,
+            "adresa": "hadhsa"
+        },
+        "logoObjekta": "img/profile.jpg",
+        "prosecnaOcena": 5.0,
+        "pocetakRadnogVremena": "06:00",
+        "krajRadnogVremena": "16:00"
+    },
+    {
+        "id": 1655715936262,
+        "naziv": "Naziv",
+        "tip": "TERETANA",
+        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
+        "status":"OTVORENO",
+        "lokacija": {
+            "geografskaDuzina": 16.4,
+            "geografskaSirina": 55.0,
+            "adresa": "hadhsa"
+        },
+        "logoObjekta": "img/profile.jpg",
+        "prosecnaOcena": 5.0,
+        "pocetakRadnogVremena": "06:00",
+        "krajRadnogVremena": "13:00"
+    },
+    {
+        "id": 1655715943578,
+        "naziv": "Naziv",
+        "tip": "TERETANA",
+        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
+        "status":"OTVORENO",
+        "lokacija": {
+            "geografskaDuzina": 16.4,
+            "geografskaSirina": 55.0,
+            "adresa": "hadhsa"
+        },
+        "logoObjekta": "img/profile.jpg",
+        "prosecnaOcena": 5.0,
+        "pocetakRadnogVremena": "06:00",
+        "krajRadnogVremena": "19:00"
+    },
+    {
+        "id": 1655715945886,
+        "naziv": "Naziv",
+        "tip": "TERETANA",
+        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
+        "status":"OTVORENO",
+        "lokacija": {
+            "geografskaDuzina": 16.4,
+            "geografskaSirina": 55.0,
+            "adresa": "hadhsa"
+        },
+        "logoObjekta": "img/profile.jpg",
+        "prosecnaOcena": 5.0,
+        "pocetakRadnogVremena": "00:00",
+        "krajRadnogVremena": "04:00"
+    },
+    {
+        "id": 1655715947981,
+        "naziv": "Naziv",
+        "tip": "TERETANA",
+        "sadrzaj":["SAUNA", "GRUPNI_TRENING"],
+        "status":"OTVORENO",
+        "lokacija": {
+            "geografskaDuzina": 16.4,
+            "geografskaSirina": 55.0,
+            "adresa": "hadhsa"
+        },
+        "logoObjekta": "img/profile.jpg",
+        "prosecnaOcena": 5.0,
+        "pocetakRadnogVremena": "06:00",
+        "krajRadnogVremena": "16:00"
+    },
+    {
+        "id": 6747384374,
+        "naziv": "Play",
+        "tip": "PLESNI_STUDIO",
+        "sadrzaj":["SAUNA"],
+        "status":"OTVORENO",
+        "lokacija": {
+            "geografskaDuzina": 16.4,
+            "geografskaSirina": 55.0,
+            "adresa": "Kralja Petra 43, Novi Sad"
+        },
+        "logoObjekta": "img/profile.jpg",
+        "prosecnaOcena": 5.0,
+        "pocetakRadnogVremena": "06:00",
+        "krajRadnogVremena": "16:00"
+    }
+]
